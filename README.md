@@ -21,5 +21,5 @@ Originally generated using:
 
 Installing libuvc via brew results in a library that doesn't find manufacturer
 and product names. In addition, it is not configured with JPEG support by
-default. Installing it with `brew install libuvc --HEAD --width-jpeg` resolves
+default. Installing it with `brew install libuvc --HEAD --with-jpeg` resolves
 these issues.
