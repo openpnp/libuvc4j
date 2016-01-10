@@ -2,7 +2,7 @@
 
 A "batteries included" libuvc binding for Java.
 
-* Runtime support by [Bridj](https://github.com/nativelibs4java/BridJ).
+* Runtime support by [BridG](https://github.com/nativelibs4java/BridJ).
 * API generated with [JNAerator](https://github.com/nativelibs4java/JNAerator).
 * Bundled libusb and libuvc binaries, packaged by [OpenPnP](http://openpnp.org). 
 
