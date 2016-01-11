@@ -18,6 +18,9 @@ public class TestEnumerateCameras {
 			if (dev == null) {
 				break;
 			}
+			byte busNumber = UvcLibrary.uvc_get_bus_number(dev);
+			byte devAddress = UvcLibrary.uvc_get_device_address(dev);
+			System.out.println(busNumber + " " + devAddress);
 			Pointer<Pointer<uvc_device_descriptor>> desc = Pointer.allocatePointer(uvc_device_descriptor.class);
 			System.out.println("uvc_get_device_descriptor " + UvcLibrary.uvc_get_device_descriptor(dev, desc));
 			System.out.println("  Vendor ID " + desc.get().get().idVendor());
@@ -25,7 +28,6 @@ public class TestEnumerateCameras {
 			System.out.println("  Manufacturer " + getString(desc.get().get().manufacturer()));
 			System.out.println("  Product " + getString(desc.get().get().product()));
 			System.out.println("  Serial " + getString(desc.get().get().serialNumber()));
-			
 			UvcLibrary.uvc_free_device_descriptor(desc.get());
 		}
 		UvcLibrary.uvc_free_device_list(devList.get(), (byte) 1);
