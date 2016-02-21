@@ -4,7 +4,8 @@ import org.bridj.Pointer;
 import org.junit.Test;
 import org.openpnp.libuvc4j.UvcLibrary;
 import org.openpnp.libuvc4j.UvcLibrary.uvc_context;
-import org.openpnp.libuvc4j.UvcLibrary.uvc_device;
+import org.openpnp.libuvc4j.uvc_device;
+//import org.openpnp.libuvc4j.UvcLibrary.uvc_device;
 import org.openpnp.libuvc4j.uvc_device_descriptor;
 
 public class TestEnumerateCameras {
@@ -37,4 +38,11 @@ public class TestEnumerateCameras {
 		}
 		return p.getCString();
 	}
+
+	public static void main(String[] args) {
+		System.out.println("Testing Camera Enumeration");		
+		TestLibuvc_JNAEerator aTest = new TestLibuvc_JNAEerator();
+		aTest.test();
+	}
+
 }
