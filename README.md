@@ -2,7 +2,7 @@
 
 A "batteries included" libuvc binding for Java.
 
-* Runtime support by [Bridj](https://github.com/nativelibs4java/BridJ).
+* Runtime support by [BridG](https://github.com/nativelibs4java/BridJ).
 * API generated with [JNAerator](https://github.com/nativelibs4java/JNAerator).
 * Bundled libusb and libuvc binaries, packaged by [OpenPnP](http://openpnp.org). 
 
@@ -21,5 +21,5 @@ Originally generated using:
 
 Installing libuvc via brew results in a library that doesn't find manufacturer
 and product names. In addition, it is not configured with JPEG support by
-default. Installing it with `brew install libuvc --HEAD --width-jpeg` resolves
+default. Installing it with `brew install libuvc --HEAD --with-jpeg` resolves
 these issues.
