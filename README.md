@@ -6,6 +6,8 @@ A "batteries included" libuvc binding for Java.
 * API generated with [JNAerator](https://github.com/nativelibs4java/JNAerator).
 * Bundled libusb and libuvc binaries, packaged by [OpenPnP](http://openpnp.org). 
 
+## WARNING: This library is not yet released. It's mostly working but the libraries have not been bundled and there are still some unsolved bugs. Use at your own risk.
+
 ## Maven
  
 
