@@ -1,4 +1,5 @@
 # libuvc4j
+[![Build Status](https://travis-ci.org/openpnp/libuvc4j.svg?branch=master)](https://travis-ci.org/openpnp/openpnp)
 
 A "batteries included" libuvc binding for Java.
 
