@@ -23,8 +23,8 @@ public class TestEnumerateCameras {
 			System.out.println(busNumber + " " + devAddress);
 			Pointer<Pointer<uvc_device_descriptor>> desc = Pointer.allocatePointer(uvc_device_descriptor.class);
 			System.out.println("uvc_get_device_descriptor " + UvcLibrary.uvc_get_device_descriptor(dev, desc));
-			System.out.println("  Vendor ID " + desc.get().get().idVendor());
-			System.out.println("  Product ID " + desc.get().get().idProduct());
+			System.out.println("  Vendor ID " + getHexString(desc.get().get().idVendor()));
+			System.out.println("  Product ID " + getHexString(desc.get().get().idProduct()));
 			System.out.println("  Manufacturer " + getString(desc.get().get().manufacturer()));
 			System.out.println("  Product " + getString(desc.get().get().product()));
 			System.out.println("  Serial " + getString(desc.get().get().serialNumber()));
@@ -38,5 +38,14 @@ public class TestEnumerateCameras {
 			return null;
 		}
 		return p.getCString();
+	}
+
+	public static String getHexString(int p) {
+		String theStr = Integer.toHexString(p);
+		while (theStr.length()<4)
+			theStr = new String("0" + theStr);
+		if (theStr.length()>4)
+			theStr = theStr.substring(theStr.length()-4);
+		return new String("0x" + theStr);
 	}
 }
