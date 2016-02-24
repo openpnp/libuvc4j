@@ -23,8 +23,8 @@ public class TestEnumerateCameras {
 			System.out.println(busNumber + " " + devAddress);
 			Pointer<Pointer<uvc_device_descriptor>> desc = Pointer.allocatePointer(uvc_device_descriptor.class);
 			System.out.println("uvc_get_device_descriptor " + UvcLibrary.uvc_get_device_descriptor(dev, desc));
-			System.out.println("  Vendor ID " + desc.get().get().idVendor());
-			System.out.println("  Product ID " + desc.get().get().idProduct());
+			System.out.println("  Vendor ID: " + String.format("0x%04x",desc.get().get().idVendor()));
+			System.out.println("  Product ID: " + String.format("0x%04x",desc.get().get().idProduct()));
 			System.out.println("  Manufacturer " + getString(desc.get().get().manufacturer()));
 			System.out.println("  Product " + getString(desc.get().get().product()));
 			System.out.println("  Serial " + getString(desc.get().get().serialNumber()));
